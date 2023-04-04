@@ -48,11 +48,11 @@ skipButton.addEventListener("click", function () {
 });
 
 muteButton.addEventListener("click", function() {
-	if (video.volume > 0) {
-		video.volume = 0
+	if (video.muted === false) {
+		video.muted = true
 		muteButton.innerHTML = "Unmute"
 	} else {
-		video.volume = 1
+		video.muted = false
 		muteButton.innerHTML = "Mute"
 	}
 });
