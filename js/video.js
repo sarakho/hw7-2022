@@ -37,7 +37,7 @@ slowButton.addEventListener("click", function () {
 
 speedButton.addEventListener("click", function () {
 	if (video.paused == false) {
-		video.playbackRate = video.playbackRate * 2;
+		video.playbackRate = video.playbackRate + video.playbackRate * 0.1;
 		console.log("new speed " + video.playbackRate);
 	}
 });
@@ -48,9 +48,12 @@ skipButton.addEventListener("click", function () {
 });
 
 muteButton.addEventListener("click", function() {
-	if (video.paused == false) {
+	if (video.volume > 0) {
 		video.volume = 0
 		muteButton.innerHTML = "Unmute"
+	} else {
+		video.volume = 1
+		muteButton.innerHTML = "Mute"
 	}
 });
 
