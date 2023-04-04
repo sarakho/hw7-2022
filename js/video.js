@@ -30,14 +30,14 @@ pauseButton.addEventListener("click", function () {
 
 slowButton.addEventListener("click", function () {
 	if (video.paused == false) {
-		video.playbackRate = video.playbackRate - video.playbackRate*0.1;
+		video.playbackRate = video.playbackRate*0.9;
 		console.log("new speed = " + video.playbackRate);
 	}
 });
 
 speedButton.addEventListener("click", function () {
 	if (video.paused == false) {
-		video.playbackRate = video.playbackRate + video.playbackRate*0.1;
+		video.playbackRate = video.playbackRate*1.1;
 		console.log("new speed " + video.playbackRate);
 	}
 });
